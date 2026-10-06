@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Посібник для початківців з Unreal Editor for Fortnite (UEFN): встановлення, основні пристрої та часті запитання">
+  <title>UEFN для початківців: перший острів — Коваленко Вадим</title>
+  <style>
+    body { max-width: 900px; margin: 0 auto; padding: 16px; font-family: Arial, sans-serif; line-height: 1.6; color: #1f1f1f; }
+    a { color: #1a5fb4; }
+    :focus-visible { outline: 3px solid #e66100; outline-offset: 2px; }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+      border: 0;
+    }
+    .focusable:focus,
+    .focusable:focus-visible {
+      position: static;
+      width: auto; height: auto;
+      margin: 0;
+      clip-path: none;
+      padding: 0.5rem 1rem;
+      background: #fff;
+      display: inline-block;
+    }
+
+    .site-header > .notice { flex-basis: 100%; }
+    .site-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; border-bottom: 2px solid #ddd; padding-bottom: 8px; }
+    .logo { font-size: 22px; font-weight: bold; text-decoration: none; color: #1f1f1f; }
+    .site-header ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 16px; }
+    [aria-current="page"] { font-weight: bold; }
+    .notice { background: #fff4ce; padding: 8px 12px; margin: 12px 0; display: flex; justify-content: space-between; align-items: center; }
+    .notice p { margin: 0; }
+    .icon-button { background: none; border: 1px solid #8a6d00; border-radius: 4px; cursor: pointer; font-size: 16px; padding: 2px 8px; }
+    .btn { display: inline-block; background: #1a5fb4; color: #fff; padding: 6px 14px; text-decoration: none; border: 0; font-size: 16px; cursor: pointer; }
+    figure { margin: 16px 0; }
+    figure img { max-width: 100%; height: auto; }
+    figcaption { font-size: 14px; color: #555; }
+    details { margin: 8px 0; }
+    summary { font-weight: bold; cursor: pointer; }
+    .resources { background: #f4f4f4; padding: 12px; margin-top: 16px; }
+    .site-footer { border-top: 2px solid #ddd; margin-top: 24px; padding-top: 8px; color: #555; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "UEFN для початківців: перший острів",
+    "description": "Посібник для початківців з Unreal Editor for Fortnite: встановлення редактора, основні пристрої та часті запитання.",
+    "inLanguage": "uk",
+    "image": "https://imhatep.github.io/web-course/lab04/island.svg",
+    "datePublished": "2026-10-06",
+    "dateModified": "2026-10-06",
+    "author": {
+      "@type": "Person",
+      "name": "Вадим Коваленко",
+      "url": "https://imhatep.github.io/web-course/about.html"
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "Unreal Editor for Fortnite",
+      "applicationCategory": "GameApplication"
+    },
+    "mainEntityOfPage": "https://imhatep.github.io/web-course/lab04/"
+  }
+  </script>
+</head>
+<body>
+  <a class="visually-hidden focusable" href="#main">Перейти до основного вмісту</a>
+
+  <header class="site-header">
+    <a href="../index.html" class="logo">UEFN Гайд</a>
+    <nav aria-label="Основна навігація">
+      <ul>
+        <li><a href="../index.html">Головна</a></li>
+        <li><a href="../about.html">Про автора</a></li>
+        <li><a href="../contacts.html">Контакти</a></li>
+        <li><a href="index.html" aria-current="page">Посібник</a></li>
+      </ul>
+    </nav>
+    <div class="notice" id="notice">
+      <p>Сторінку оновлено <time datetime="2026-10-06">6&nbsp;жовтня 2026&nbsp;року</time>.</p>
+      <button type="button" class="icon-button" id="notice-close" aria-label="Закрити повідомлення">
+        <span aria-hidden="true">✕</span>
+      </button>
+    </div>
+  </header>
+
+
+  <main id="main">
+    <article>
+      <h1>UEFN для початківців: перший острів</h1>
+
+      <section aria-labelledby="what-title">
+        <h2 id="what-title">Що таке UEFN</h2>
+        <p>
+          Unreal Editor for Fortnite (UEFN)&nbsp;&mdash; це редактор для створення власних
+          ігрових островів у Fortnite. Його було випущено
+          <time datetime="2023-03-22">22&nbsp;березня 2023&nbsp;року</time>.
+        </p>
+        <figure>
+          <img src="island.svg" width="600" height="300"
+               alt="Схема острова: гравець з&rsquo;являється на точці спавну, переходить у зону тригера, який запускає таймер">
+          <figcaption>Рисунок 1. Схема простого острова з трьома пристроями</figcaption>
+        </figure>
+
+        <h3>Встановлення</h3>
+        <p>Редактор завантажують через Epic Games Launcher.</p>
+        <p>
+          <a class="btn" href="https://dev.epicgames.com/documentation/en-us/uefn">Детальніше про UEFN
+            <span class="visually-hidden">у документації Epic Games</span></a>
+        </p>
+      </section>
+
+      <section aria-labelledby="devices-title">
+        <h2 id="devices-title">Основні пристрої</h2>
+        <h3>Пристрій-тригер</h3>
+        <p>Запускає подію, коли гравець входить у зону.</p>
+        <h3>Таймер</h3>
+        <p>Відлічує час раунду.</p>
+      </section>
+
+      <section aria-labelledby="faq-title">
+        <h2 id="faq-title">Часті запитання</h2>
+        <p><button type="button" class="btn" id="faq-toggle" aria-controls="faq-list" aria-expanded="false">Розгорнути всі відповіді</button></p>
+        <div id="faq-list">
+          <details>
+            <summary>Чи потрібен потужний комп&rsquo;ютер?</summary>
+            <p>Так, вимоги вищі, ніж для самої гри.</p>
+          </details>
+          <details>
+            <summary>Чи можна заробляти на островах?</summary>
+            <p>Так, через програму виплат творцям.</p>
+          </details>
+          <details>
+            <summary>Яку мову програмування використовує UEFN?</summary>
+            <p>Мову Verse.</p>
+          </details>
+        </div>
+      </section>
+
+      <footer>
+        <p>Опубліковано <time datetime="2026-10-06">6&nbsp;жовтня 2026&nbsp;р.</time></p>
+      </footer>
+    </article>
+  </main>
+
+  <aside class="resources" aria-labelledby="res-title">
+    <h2 id="res-title">Корисні посилання</h2>
+    <nav aria-label="Корисні посилання">
+      <ul>
+        <li>
+          <a href="https://dev.epicgames.com/documentation/en-us/uefn" target="_blank" rel="noopener">Документація UEFN
+            <span aria-hidden="true">↗</span><span class="visually-hidden">(відкривається в новій вкладці)</span></a>
+        </li>
+        <li>
+          <a href="https://create.fortnite.com/" target="_blank" rel="noopener">Портал творців
+            <span aria-hidden="true">↗</span><span class="visually-hidden">(відкривається в новій вкладці)</span></a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <footer class="site-footer">
+    <address>
+      Автор: <a href="../about.html">Вадим Коваленко</a>,
+      пошта: <a href="mailto:axeshock322@gmail.com">axeshock322@gmail.com</a>
+    </address>
+    <p><small>&copy; <time datetime="2026">2026</time></small></p>
+  </footer>
+
+  <script>
+    document.getElementById('notice-close').addEventListener('click', function () {
+      document.getElementById('notice').remove();
+    });
+
+    var toggle = document.getElementById('faq-toggle');
+    toggle.addEventListener('click', function () {
+      var open = toggle.getAttribute('aria-expanded') !== 'true';
+      document.querySelectorAll('#faq-list details').forEach(function (d) { d.open = open; });
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.textContent = open ? 'Згорнути всі відповіді' : 'Розгорнути всі відповіді';
+    });
+  </script>
+</body>
+</html>

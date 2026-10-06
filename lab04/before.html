@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UEFN для початківців</title>
+  <style>
+    body { max-width: 900px; margin: 0 auto; padding: 16px; font-family: Arial, sans-serif; line-height: 1.6; }
+    .top { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #ddd; padding-bottom: 8px; }
+    .logo { font-size: 22px; font-weight: bold; }
+    .menu-item { display: inline-block; margin-left: 16px; color: #1a5fb4; cursor: pointer; }
+    .menu-item.active { font-weight: bold; text-decoration: underline; }
+    .notice { background: #fff4ce; padding: 8px 12px; margin: 12px 0; display: flex; justify-content: space-between; }
+    .close { cursor: pointer; }
+    .big-title { font-size: 32px; font-weight: bold; margin: 16px 0; }
+    .post-title { font-size: 24px; font-weight: bold; margin-top: 16px; }
+    .small-title { font-size: 18px; font-weight: bold; margin-top: 12px; }
+    .btn { display: inline-block; background: #1a5fb4; color: #fff; padding: 6px 14px; cursor: pointer; }
+    .side { background: #f4f4f4; padding: 12px; margin-top: 16px; }
+    .faq-q { font-weight: bold; cursor: pointer; margin-top: 8px; }
+    .faq-a { display: none; }
+    .bottom { border-top: 2px solid #ddd; margin-top: 24px; padding-top: 8px; color: #777; }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <div class="logo">UEFN Гайд</div>
+    <div class="menu">
+      <div class="menu-item" onclick="location='../index.html'">Головна</div>
+      <div class="menu-item" onclick="location='../about.html'">Про автора</div>
+      <div class="menu-item" onclick="location='../contacts.html'">Контакти</div>
+      <div class="menu-item active">Посібник</div>
+    </div>
+  </div>
+
+  <div class="notice">
+    <span>Сторінку оновлено 6 жовтня 2026 року.</span>
+    <span class="close" onclick="this.parentNode.remove()">✕</span>
+  </div>
+
+  <div class="content">
+    <div class="big-title">UEFN для початківців: перший острів</div>
+
+    <div class="post">
+      <div class="post-title">Що таке UEFN</div>
+      <div class="post-text">
+        Unreal Editor for Fortnite (UEFN) - це редактор для створення власних ігрових островів у Fortnite.
+        Його було випущено 22 березня 2023 року.
+      </div>
+      <div class="picture">
+        <img src="island.svg" width="600" height="300">
+        <div>Схема простого острова</div>
+      </div>
+      <div class="small-title">Встановлення</div>
+      <div>Редактор завантажують через Epic Games Launcher.</div>
+      <div class="btn" onclick="location='https://dev.epicgames.com/documentation/en-us/uefn'">Детальніше</div>
+    </div>
+
+    <div class="post">
+      <div class="post-title">Основні пристрої</div>
+      <div class="small-small-title" style="font-weight:bold">Пристрій-тригер</div>
+      <div>Запускає подію, коли гравець входить у зону.</div>
+      <div class="small-small-title" style="font-weight:bold">Таймер</div>
+      <div>Відлічує час раунду.</div>
+    </div>
+  </div>
+
+  <div class="side">
+    <div class="small-title">Корисні посилання</div>
+    <div onclick="location='https://dev.epicgames.com/documentation/en-us/uefn'">Документація UEFN</div>
+    <div onclick="location='https://create.fortnite.com/'">Портал творців</div>
+  </div>
+
+  <div class="faq">
+    <div class="post-title">Часті запитання</div>
+    <div class="faq-q" onclick="this.nextElementSibling.style.display='block'">Чи потрібен потужний комп'ютер?</div>
+    <div class="faq-a">Так, вимоги вищі, ніж для самої гри.</div>
+    <div class="faq-q" onclick="this.nextElementSibling.style.display='block'">Чи можна заробляти на островах?</div>
+    <div class="faq-a">Так, через програму виплат творцям.</div>
+    <div class="faq-q" onclick="this.nextElementSibling.style.display='block'">Яку мову програмування використовує UEFN?</div>
+    <div class="faq-a">Мову Verse.</div>
+  </div>
+
+  <div class="bottom">
+    <div>Автор: Вадим Коваленко</div>
+    <div>Пошта: axeshock322@gmail.com</div>
+    <div>2026</div>
+  </div>
+</body>
+</html>
